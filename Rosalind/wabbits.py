@@ -1,16 +1,15 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-babies = 0
-adults = 1
+def wabbits(n, k):
+    babies = 0
+    adults = 1
+    i = 1
 
-n = 32
-k = 5
-i = 1
+    while i <= n-2:
+        newbabies = adults * k
+        adults += babies
+        babies = newbabies
+        i += 1
+        
+    return babies+adults
 
-while i <= n-2:
-    newbabies = adults * k
-    adults += babies
-    babies = newbabies
-    i += 1
-    
-print(babies+adults)
+
+print(wabbits(5,3))
