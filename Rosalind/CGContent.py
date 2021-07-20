@@ -1,14 +1,12 @@
 from Bio import SeqIO
+from Bio.SeqUtils import GC
+name = ''
+max = 0
+for seq_record in SeqIO.parse("rosalind_gc.txt", "fasta"):
+    x = GC(seq_record.seq)
+    if x > max:
+        max = x
+        name = seq_record.id
 
-#records = list(SeqIO.parse('rosalind_gc.txt', "fasta"))
-
-records = ""
-
-gc = 0
-
-
-for x in records:
-    if x == 'G' or 'C':
-        gc += 1
-
-print(gc)
+print(name)
+print(max)
