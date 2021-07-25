@@ -2,7 +2,7 @@ def probability(k, m, n):
     sum = k + m + n
     # Probability of having at least one
     # dominant allele is = 
-    # 1 - P(no dominant alleles)
+    # 1 - P(# recessive alleles)
 
     rr = (n/sum) * ((n-1)/(sum - 1))
     hh = (m/sum) * ((m-1)/(sum - 1))

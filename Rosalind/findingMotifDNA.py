@@ -3,9 +3,9 @@ t = 'CGATCGTCG'
 location = []
 
 for i, x in enumerate(s):
-    print(s[i : (i + (len(t)) )])
     if x == t[0]:
-        if s[i : (i + (len(t)) )]   == t:
+        if s[i:(i+(len(t)))] == t:
             location.append((i+1))
+
 
 print(*location, sep=' ')

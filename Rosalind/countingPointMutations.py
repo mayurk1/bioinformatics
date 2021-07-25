@@ -6,4 +6,5 @@ for x, y in zip(s, t):
     if x != y:
         hum += 1
 
+
 print(hum)
